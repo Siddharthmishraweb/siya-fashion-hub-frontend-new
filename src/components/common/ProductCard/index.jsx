@@ -75,10 +75,12 @@ const ProductCard = ({
       (variant) => variant.variantId === variantId
     );
 
+    console.warn("selectedVariant => ", selectedVariant)
+
     setCurrentVariant({
       variantId,
       color: selectedVariant.color,
-      currentPrice: selectedVariant.price,
+      currentPrice: selectedVariant.currentPrice,
       discount: selectedVariant.discount,
       slides: selectedVariant.slides,
       skus: selectedVariant.skus,
@@ -109,6 +111,8 @@ const ProductCard = ({
     variantId: variant.variantId,
   }));
   // const allVariantSlides = [];
+
+  // product price is from here
 
   return (
     <>
@@ -246,10 +250,12 @@ const ProductCard = ({
                   {currentVariant.currentPrice < actualPrice ? (
                     <>
                       <span className={styles.discounted_price}>
-                        ₹{formatPrice(currentVariant.currentPrice)}
+                        {/* ₹{formatPrice(currentVariant.currentPrice)} */}
+                        11
                       </span>
                       <span className={styles.crossed_price}>
-                      ₹{formatPrice(actualPrice)}
+                      {/* ₹{formatPrice(actualPrice)} */}
+                      12
                       </span>
                     </>
                   ) : (

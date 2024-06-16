@@ -37,9 +37,13 @@ const Cart = ({ isCartModalOpen, closeCartModal }) => {
             sortBy: { field: 'price', direction: 'desc' },
           });
 
+
+
           const sortedVariants = fetchedVariants.sort((a, b) =>
             a.color.toUpperCase() > b.color.toUpperCase() ? 1 : -1
           );
+
+   
           setFetchedVariants(sortedVariants);
           setSlides(sortedVariants);
         })();

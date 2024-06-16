@@ -19,7 +19,7 @@ const QuickAdd = ({
   sizesSliderClassName,
 }) => {
 
-  console.log("skus:::  =>>>>>>>>>>>>>", skus);
+
   if (isSmallContainer) {
     return (
       <>

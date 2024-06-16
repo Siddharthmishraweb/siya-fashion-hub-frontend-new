@@ -43,7 +43,7 @@ const Slider = ({
     // slugCheck = slides[0].url === pathname.split('/')[2];
   }
 
-  console.log("slides==========:haha::   ", slides);
+
 
   return (
     <>

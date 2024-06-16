@@ -24,7 +24,10 @@ const CartContent = ({ closeCartModal, slides }) => {
     }
   }, [error]);
 
-  const totalQuantity = addAllItemsQuantity(items);
+  // console.log("items:::   => ", items)
+  // console.log("slides cartcontent:::   => ", slides)
+  // debugger
+  const totalQuantity = addAllItemsQuantity(items?.items);
 
   return (
     <>
@@ -62,7 +65,7 @@ const CartContent = ({ closeCartModal, slides }) => {
           <div className={styles.content}>
             <div className={styles.list_wrapper}>
               <div className={styles.list}>
-                {items.map((item) => (
+                {items?.items?.map((item) => (
                   <CartItem
                     closeCartModal={closeCartModal}
                     key={item.skuId}

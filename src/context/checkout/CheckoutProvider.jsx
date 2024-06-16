@@ -121,7 +121,7 @@ const CheckoutProvider = ({ children }) => {
     getCheckoutSession();
   }, []);
 
-  console.log('checkout-context', state);
+
 
   return (
     <CheckoutContext.Provider value={{ ...state, dispatch }}>

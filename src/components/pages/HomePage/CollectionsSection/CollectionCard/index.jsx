@@ -5,12 +5,6 @@ import styles from './index.module.scss';
 // eslint-disable-next-line react/prop-types
 const CollectionCard = ({ id, image, title, text, url }) => {
 
-  console.log("===========================================================================================================================")
-  console.log("id::  ", id);
-  console.log("image::  ", image);
-  console.log("title::  ", title);
-  console.log("text::  ", text);
-  console.log("url::  ", url);
 
 
   const isAlt = title === 'hoodies';

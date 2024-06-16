@@ -5,7 +5,7 @@ import { COLLECTIONS as collections } from './data';
 import styles from './index.module.scss';
 
 const CollectionsSection = () => {
-  console.log("collections=====", collections)
+
   return (
     <section className={styles.section}>
       <div className={`${styles.container} main-container`}>

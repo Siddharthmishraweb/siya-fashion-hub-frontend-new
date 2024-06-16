@@ -182,7 +182,7 @@ const ProductProvider = ({ children }) => {
     }
   }, [slugId, slugState]);
 
-  console.log('product-context', state);
+
 
   return (
     <ProductContext.Provider value={{ ...state, dispatch }}>
