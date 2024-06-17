@@ -407,7 +407,7 @@
 
 import { useState, useRef } from 'react';
 import axios from 'axios';
-const baseUrl = "http://localhost:5000/"
+const baseUrl = "http://13.60.78.3:5000/"
 
 export const useCollection = () => {
   const [isLoading, setIsLoading] = useState(false);

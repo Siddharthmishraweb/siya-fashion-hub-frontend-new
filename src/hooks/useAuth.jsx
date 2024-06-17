@@ -358,7 +358,7 @@ import { useState } from 'react';
 import { useAuthContext } from './useAuthContext';
 import { useCartContext } from './useCartContext';
 import { handleError } from 'helpers/error/handleError';
-const baseUrl = "http://localhost:5000/"
+const baseUrl = "http://13.60.78.3:5000/"
 
 export const useAuth = () => {
   const { user, dispatch: dispatchAuthAction } = useAuthContext();
