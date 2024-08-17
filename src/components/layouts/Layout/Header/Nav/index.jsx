@@ -111,7 +111,7 @@ const Navbar = ({ toggleSideNav, openCartModal }) => {
             to="/account/login"
             className={`${styles.link} ${styles.login_link}`}
           >
-            Login
+            Login1
           </Link>
         )}
         {isVerified && (

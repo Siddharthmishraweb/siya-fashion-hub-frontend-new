@@ -311,7 +311,7 @@ import { useCartContext } from './useCartContext';
 import { addAllItemsQuantity } from 'helpers/item';
 import { CustomError } from 'helpers/error/customError';
 import { handleError } from 'helpers/error/handleError';
-const baseUrl = "http://13.60.78.3:5000/"
+const baseUrl = "http://localhost:5000/"
 
 export const useCart = () => {
   const { user } = useAuthContext();
