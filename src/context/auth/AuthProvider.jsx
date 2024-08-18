@@ -45,15 +45,17 @@ const authReducer = (state, action) => {
     }
 
     case 'LOGIN': {
+      console.warn("aaya h:: ", action.payload);
       return {
         ...state,
         user: action.payload.user,
-        name: action.payload.name,
-        lastName: action.payload.lastName,
-        email: action.payload.email,
-        phoneNumber: action.payload.phoneNumber || null,
+        name: action.payload.user.name,
+        lastName: action.payload.user.lastName,
+        email: action.payload.user.email,
+        phoneNumber: action.payload.user.phoneNumber || null,
         addresses: action.payload.addresses || [],
-        isVerified: action.payload.isVerified,
+        // isVerified: action.payload.isVerified,
+        isVerified: true,
         isAdmin: action.payload.isAdmin || null,
       };
     }

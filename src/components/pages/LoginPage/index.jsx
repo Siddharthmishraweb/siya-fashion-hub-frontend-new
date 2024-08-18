@@ -280,9 +280,14 @@ const LoginPage = () => {
                       ref={passwordInput}
                     />
                   </label>
-                  <button className={styles.button} type="submit">
+                  {/* <button className={styles.button} type="submit">
                     Login
-                  </button>
+                  </button> */}
+<Link to="/">
+  <button className={styles.button} type="submit">
+    Login
+  </button>
+</Link>
                 </form>
                 {/* <GoogleLogin
                   clientId="1065253728899-3ghn2gv5b3qg6djp91rg3e022h1d16b2.apps.googleusercontent.com"

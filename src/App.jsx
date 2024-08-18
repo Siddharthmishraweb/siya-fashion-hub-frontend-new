@@ -160,7 +160,7 @@ const App = () => {
             />
             <Route path="cart" element={<CartPage />} />
 
-            <Route element={<ProtectedRoutes needAuth={true} />}>
+            {/* <Route element={<ProtectedRoutes needAuth={true} />}> */}
               <Route
                 path="checkout"
                 element={
@@ -171,12 +171,12 @@ const App = () => {
               />
               <Route path="account" element={<AccountPage />} />
               <Route path="account/addresses" element={<AddressesPage />} />
-            </Route>
+            {/* </Route> */}
 
-            <Route element={<ProtectedRoutes needAuth={false} />}>
+            {/* <Route element={<ProtectedRoutes needAuth={false} />}> */}
               <Route path="account/login" element={<LoginPage />} />
               <Route path="account/signup" element={<SignUpPage />} />
-            </Route>
+            {/* </Route> */}
 
             {/* <Route element={<ProtectedRoutes needAdmin={true} />}>
               <Route path="admin" element={<AdminPage />} />

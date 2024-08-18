@@ -10,8 +10,21 @@ import { useAddress } from './useAddress';
 
 export const useCheckout = () => {
   const { dispatch } = useCheckoutContext();
-  const { user } = useAuthContext();
+  // const { user } = useAuthContext();
   const { createAddress } = useAddress();
+  const [user, setUser] = useState({
+    _id: "666ec5c338f11d4665e0b43c",
+    uid: "666ec5c338f11d4665e0b43c",
+    name: "Anil Kumar Mishra",
+    lastName: "Mishra",
+    email: "mishrasiddharth1999@gmail.com",
+    phoneNumber: null,
+    isVerified: false,
+    password: "$2b$10$0iD3KETauzTX9rrvKcnj.u4DG27adyENaFHFQtgn4O6JXJDI93HC.",
+    addresses: [],
+    __v: 0,
+  });
+
 
   const checkoutSessionRef = doc(db, 'checkoutSessions', user.uid);
 

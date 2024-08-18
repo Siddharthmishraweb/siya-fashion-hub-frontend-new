@@ -344,32 +344,32 @@ const CartProvider = ({ children }) => {
 
   const { getCart } = useCart();
 
-  useEffect(() => {
-    if (user && state.isLogin) {
-      dispatch({ type: 'CART_NOT_READY' });
+  // useEffect(() => {
+  //   if (user && state.isLogin) {
+  //     dispatch({ type: 'CART_NOT_READY' });
 
-      const fetchCart = async () => {
-        try {
-          const cartData = await getCart(); // Fetch cart data from API
-          // console.log("cartData:::: ", cartData);
-          if (cartData && cartData.items.length > 0) {
-            dispatch({
-              type: 'UPDATE_CART',
-              payload: cartData.items,
-            });
-          } else {
-            dispatch({
-              type: 'CART_IS_READY',
-            });
-          }
-        } catch (err) {
-          console.error('Error fetching cart:', err);
-        }
-      };
+  //     const fetchCart = async () => {
+  //       try {
+  //         const cartData = await getCart(); // Fetch cart data from API
+  //         // console.log("cartData:::: ", cartData);
+  //         if (cartData && cartData.items.length > 0) {
+  //           dispatch({
+  //             type: 'UPDATE_CART',
+  //             payload: cartData.items,
+  //           });
+  //         } else {
+  //           dispatch({
+  //             type: 'CART_IS_READY',
+  //           });
+  //         }
+  //       } catch (err) {
+  //         console.error('Error fetching cart:', err);
+  //       }
+  //     };
 
-      fetchCart();
-    }
-  }, [user, getCart]);
+  //     fetchCart();
+  //   }
+  // }, [user, getCart]);
 
   // console.log("state:::  ", state);
 

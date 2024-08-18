@@ -9,7 +9,20 @@ import { useAuthContext } from './useAuthContext';
 import { handleError } from 'helpers/error/handleError';
 
 export const useProfile = () => {
-  const { user, dispatch } = useAuthContext();
+  const {  dispatch } = useAuthContext();
+  const [user, setUser] = useState({
+    _id: "666ec5c338f11d4665e0b43c",
+    uid: "666ec5c338f11d4665e0b43c",
+    name: "Anil Kumar Mishra",
+    lastName: "Mishra",
+    email: "mishrasiddharth1999@gmail.com",
+    phoneNumber: null,
+    isVerified: false,
+    password: "$2b$10$0iD3KETauzTX9rrvKcnj.u4DG27adyENaFHFQtgn4O6JXJDI93HC.",
+    addresses: [],
+    __v: 0,
+  });
+
 
   const userRef = doc(db, 'users', user.uid);
 

@@ -417,6 +417,7 @@ export const useAuth = () => {
       }
 
       const data = await response.json();
+      localStorage.setItem('user', JSON.stringify(data));
       dispatchAuthAction({ type: 'LOGIN', payload: data });
       dispatchCartAction({ type: 'IS_LOGIN' });
     } catch (err) {
